@@ -1,0 +1,49 @@
+.header{
+
+}
+
+.container__item{
+    background-color:#fff;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    border-radius: 15px;
+}
+
+.title{
+    text-align:center;
+    font-size: 2em;
+    margin: 0 auto 10px;
+}
+
+.text{
+    font-size: 1.25em;
+}
+
+.algorithm{
+    margin: 0;
+}
+
+.algorithm__caption{
+    font-size: 1.25em;
+}
+
+.algorithm__list{
+    padding: 10px;
+    padding-left: 35px;
+    margin: 0;
+}
+
+.algorithm__list-item{
+    font-size: 1.25em;
+}
+
+/* Media */
+
+@media(max-width:576px){
+    .algorithm__list {
+        padding: 10px;
+        padding-left: 20px;
+    }
+}
