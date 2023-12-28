@@ -17,6 +17,10 @@ body{
     font-weight: 400;
     line-height: 1.5;
     box-sizing:inherit;
+    background: url(../images/main-bg.jpg);
+    background-repeat: repeat-y;
+    background-position: 100% 2px;
+    background-size: 100%;
 }
 
 .wrapper{
@@ -27,11 +31,6 @@ body{
 
 .promo{
     display:flex;
-    height:100%;
-    background:url(../images/main-bg.jpg);
-    background-repeat:repeat-y;
-    background-position: 100% 2px;
-    background-size:100%;
 }
 
 .main{
@@ -43,7 +42,6 @@ body{
 *::after{
     box-sizing:inherit;
 }
-
 
 h1,h2,h3,h4,h5,h6{
     margin: 0;
@@ -68,6 +66,65 @@ ul{
 
 ul > li{
     list-style:none;
+}
+
+
+.title{
+    text-align:center;
+    font-size: 2em;
+    margin: 0 auto 10px;
+}
+
+.text{
+    font-size: 1.25em;
+}
+
+.dec-n{
+    text-decoration:none;
+}
+
+.m-0{
+    margin:0;
+}
+
+.content-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+}
+
+.content-item{
+    padding: 15px;
+    background-color:var(--background);
+    border-radius:10px;
+}
+
+.content-title{
+    font-weight: 500;
+    font-size: 1.25em;
+    
+}
+
+.content-item__list{
+    padding-left: 40px;
+}
+
+.content-item__list-item{
+    list-style:circle;
+}
+
+.content-item__list-item,
+.content-link{
+    font-weight:400;
+}
+
+.content-link{
+    color:red;
+    transition:color .3s ease-in-out;
+}
+
+.content-link:hover{
+    color:#AC0101;
 }
 
 /* Container */
@@ -107,9 +164,6 @@ ul > li{
     font-weight: 400;
 }
 
-.popup{
-    display:none;
-}
 
 .nav{
     width: 100%;
@@ -155,11 +209,15 @@ ul > li{
     display: none;
     justify-content: space-between;
     height: 100%;
-  }
+}
 
-  .hamb {
+.popup{
+    display:none;
+}
+
+.hamb {
     display: none;
-  }
+}
 
 /* /. Header */
 
@@ -219,7 +277,7 @@ ul > li{
 
 @media (max-width:900px){
 
-    body.noscroll {
+    body.noscroll{
         overflow: hidden;
     }
 
