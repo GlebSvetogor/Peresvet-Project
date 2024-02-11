@@ -61,14 +61,21 @@
         <section class="equipment">
             <div class="container page">
                 <h1 class="title">Платная консультация</h1>
-                <p class="text m-0">
-                    Частное унитарное предприятие по оказанию услуг «ПЕРЕСВЕТ-БЕЗОПАСНОСТЬ»;<br>
-                    УНП 193530040, <br>
-                    эл. почта: <a class="content-link" href="mailto:peresvetby@mail.ru">peresvetby@mail.ru</a>;<br>
-                    время работы: 9.00-18.00<br>
-                    Контактные тел.:80296196466.<br>
-                    Юр. адрес:<address>г. Минск, ул. Притыцкого, 62/1, каб. 71</address>
-                </p>
+                <form class="form" action="#">
+                    <label class="form__label" for="theme">Вопрос:</label>
+                    <textarea class="form__input" name="theme" id="theme" cols="30" rows="10"></textarea>
+
+                    <label class="form__label" for="emailAddress">Email почта:</label>
+                    <input class="form__input" name="emailAddress" type="email">
+
+                    <label class="form__label" for="phoneNumber">Номер телефона:</label>
+                    <input class="form__input" name="phoneNumber" type="tel">
+
+                    <label class="form__label" for="address">Местонахождение заявителя:</label>
+                    <input class="form__input" name="adress" type="text">
+
+                    <button class="form__button">Послать заявку</button>
+                </form>
             </div><!-- /.container -->
         </section>
     </main>
