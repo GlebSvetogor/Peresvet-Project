@@ -32,17 +32,6 @@
 
 }
 
-/* .promo__inner-title{
-    max-width:20em;
-    font-size: 2em;
-    text-align:center;
-    font-weight: 500;
-    margin:0 auto 10px;
-    background-color:var(--background);
-    border-radius:10px;
-    padding:5px 10px;
-} */
-
 .promo__inner-ad{
     background-color:#cccccc;
 }
@@ -52,3 +41,24 @@
 /* /. Main */
 
 /* Media */
+
+@media (max-width:1400px){
+
+    .promo__inner {
+        grid-template-columns: 11fr 2fr;
+    }
+}
+
+@media (max-width:1200px){
+    .promo__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .promo__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .promo__inner-ad{
+        display: none;
+    }
+}
