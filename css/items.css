@@ -34,11 +34,35 @@ section{
 
 }
 
+.request__wrapper{
+    /* border: 1px solid #000;
+    padding: 0;
+    border-radius: 10px; */
+}
+
+.request__wrapper::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#000;
+    opacity:0.3;
+}
+
 .request__btn{
+    cursor: pointer;
     padding: 5px 15px;
     margin: 5px 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+}
+
+
+.request__form{
+    display: flex;
+    flex-direction: column;
 }
 
 /* Main */
