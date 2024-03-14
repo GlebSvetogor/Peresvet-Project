@@ -89,14 +89,6 @@ ul > li{
     font-size: 16px;
 }
 
-.box{
-    -webkit-box-shadow: 0 0 10px #000;
-    box-shadow: 0 0 12px #000;
-    background-color: #fff;
-    border-radius:10px;
-    padding:15px
-}
-
 .list{
 
 }
@@ -122,6 +114,14 @@ ul > li{
     margin: 0 auto;
     padding: 0 15px;
     height:auto;
+}
+
+.box{
+    -webkit-box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 12px #000;
+    background-color: #fff;
+    border-radius:10px;
+    padding:15px
 }
 
 /* Header */

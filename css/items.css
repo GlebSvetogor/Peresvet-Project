@@ -8,10 +8,7 @@ section{
 }
 
 .page{
-    background-color:#fff;
-    padding: 10px;
     width: calc(100% - 20px);
-    border-radius: 15px;
     height:100%;
 }
 
@@ -20,17 +17,28 @@ section{
 }
 
 .algorithm__caption{
-    font-size: 1.25em;
+
 }
 
 .algorithm__list{
     padding: 10px;
-    padding-left: 35px;
+    padding-left: 18px;
     margin: 0;
 }
 
 .algorithm__list-item{
-    font-size: 1.25em;
+
+}
+
+.request{
+
+}
+
+.request__btn{
+    padding: 5px 15px;
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 /* Main */
