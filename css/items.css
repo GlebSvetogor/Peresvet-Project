@@ -33,9 +33,22 @@ section{
 }
 
 .request__btn{
-    padding: 10px;
-    font-size: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
     margin: 0;
+    cursor: pointer;
+}
+
+.request__btn-close{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    font-size: 32px;
 }
 
 .request__btn--open{
@@ -48,12 +61,15 @@ section{
 
 .request__window{
     display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
     background-color: transparent;
 }
 
@@ -83,6 +99,7 @@ section{
 }   
 
 .request__inner{
+    position:relative;
     width:700px;
     height: 900px;
     padding: 40px;
