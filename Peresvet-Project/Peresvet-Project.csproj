@@ -7,4 +7,22 @@
     <RootNamespace>Peresvet_Project</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\Ways\Montage.cshtml" />
+    <Content Remove="Views\Ways\Outsourcing.cshtml" />
+    <Content Remove="Views\Ways\ProgramDevelopment.cshtml" />
+    <Content Remove="Views\Ways\Rent.cshtml" />
+    <Content Remove="Views\Ways\Service.cshtml" />
+    <Content Remove="Views\Ways\Souvenirs.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Ways\Montage.cshtml" />
+    <None Include="Views\Ways\Outsourcing.cshtml" />
+    <None Include="Views\Ways\ProgramDevelopment.cshtml" />
+    <None Include="Views\Ways\Rent.cshtml" />
+    <None Include="Views\Ways\Service.cshtml" />
+    <None Include="Views\Ways\Souvenirs.cshtml" />
+  </ItemGroup>
+
 </Project>

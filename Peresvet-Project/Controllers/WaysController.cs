@@ -26,6 +26,12 @@ namespace Peresvet_Project.Controllers
             ViewBag.SuccessMessage = "Данные успешно отправлены!" + result;
             return View();
         }
+        [HttpGet]
+        public IActionResult Designing(int? id)
+        {
+            if(id is not null) return View(id);
+            else return RedirectToAction("Index");
+        }
 
         // GET: WaysController/Details/5
         public ActionResult Details(int id)
