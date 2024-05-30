@@ -1,11 +1,13 @@
-section{
-    padding: 10px 0;
-/*    height:100%;*/
+@mixin item-section {
+    padding: 10px;
 }
 
-.page{
-    width: calc(100% - 20px);
-    height:100%;
+.item{
+    @include item-section;
+    height: 100%;
+    .page{
+        height:100%;
+    }
 }
 
 /* Main */
