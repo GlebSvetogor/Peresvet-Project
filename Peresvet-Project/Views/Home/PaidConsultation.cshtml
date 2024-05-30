@@ -5,20 +5,24 @@
 <section class="item">
     <div class="container box page">
         <h1 class="title">Платная консультация</h1>
-        <form class="form" action="#">
-            <label class="form__label" for="theme">Вопрос:</label>
-            <textarea class="form__input" name="theme" id="theme" cols="30" rows="10"></textarea>
-
-            <label class="form__label" for="emailAddress">Email почта:</label>
-            <input class="form__input" name="emailAddress" type="email">
-
-            <label class="form__label" for="phoneNumber">Номер телефона:</label>
-            <input class="form__input" name="phoneNumber" type="tel">
-
-            <label class="form__label" for="address">Местонахождение заявителя:</label>
-            <input class="form__input" name="adress" type="text">
-
-            <button class="form__button">Послать заявку</button>
+        <form>
+            <div class="form-group mb-3">
+                <label for="exampleInputEmail1">Email почта:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
+            </div>
+            <div class="form-group mb-3">
+                <label for="exampleInputPassword1">Номер телефона:</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Телефон">
+            </div>
+            <div class="form-group mb-3">
+                <label for="exampleInputPassword1">Местонахождение заявителя:</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Местонахождение">
+            </div>
+            <div class="form-group mb-3">
+                <label for="exampleFormControlTextarea1">Ваш вопрос:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="9" placeholder="Подробно опишите свой вопрос ..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
         </form>
     </div><!-- /.container -->
 </section>

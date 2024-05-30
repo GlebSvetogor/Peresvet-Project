@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="~/js/navigation.js" defer></script>
+    <script src="~/js/navigation.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 
 </head>
 <body>
@@ -27,17 +28,40 @@
                     <nav class="navbar__wrap">
                         <div class="hamb">
                             <div class="hamb__field" id="hamb">
-                                <span class="bar"></span> <span class="bar"></span>
+                                <span class="cross">&times;</span>
+                                <span class="bar"></span> 
+                                <span class="bar"></span>
                                 <span class="bar"></span>
                             </div>
                         </div>
                     </nav>
-                    <div class="popup" id="popup"></div>
+                    <div class="popup" id="popup">
+                        <ul class="nav__list">
+                            <li class="nav__list-item">
+                                <a asp-controller="Home" asp-action="Index" class="nav__list-link">Главная</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a asp-controller="Home" asp-action="AboutUs" class="nav__list-link">О компании</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a asp-controller="Home" asp-action="Price" class="nav__list-link">Прайс</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a asp-controller="Home" asp-action="Contacts" class="nav__list-link">Контакты</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a asp-controller="Home" asp-action="PaidConsultation" class="nav__list-link">Платная консультация</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a asp-controller="Home" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div><!-- /. header__inner -->
             </div><!-- /. container -->
 
             <nav class="nav">
-                <ul class="nav__list" id="nav__list">
+                <ul class="nav__list">
                     <li class="nav__list-item">
                         <a asp-controller="Home" asp-action="Index" class="nav__list-link">Главная</a>
                     </li>

@@ -333,8 +333,16 @@ ul > li{
     }
 
     .hamb__field {
-        padding: 10px 20px;
+        
+    }
+
+    .cross {
+        @include flex-content-center;
+        display: none;
         cursor: pointer;
+        width: 30px;
+        height: 30px;
+        scale: 2.5;
     }
 
     .bar {
@@ -407,17 +415,11 @@ ul > li{
         color:#000;
     }
 
-    .hamb__field.active .bar:nth-child(2) {
-        opacity: 0;
+    .hamb__field.active .cross {
+        @include flex-content-center;
     }
 
-    .hamb__field.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
 
-    .hamb__field.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
 
     .nav{
         border:0;
