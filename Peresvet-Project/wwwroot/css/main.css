@@ -27,6 +27,29 @@ body {
   line-height: 1.5;
   box-sizing: inherit; }
 
+.table {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border: 1px solid #dddddd;
+    display: block;
+}
+
+th{
+    border:0;
+}
+
+tbody > tr > td:nth-child(2){
+    border-left:1px solid #dddddd;
+}
+
+tbody > tr:last-child > td{
+    border-bottom:0;
+}
+
+
+
 .header__inner {
     gap: 10px;
 }
@@ -215,6 +238,14 @@ ul > li {
 
 /* /. Footer */
 /* Media */
+
+/* смартфоны, устройства с сенсорным экраном, с которым работают пальцами */
+@media (hover: none){
+    .link:hover{
+        color:red;
+    }
+}
+
 @media (max-width: 1200px) {
   .link {
     display: inline-block;
@@ -474,20 +505,20 @@ ul > li {
 @media (max-width: 576px) {
   .algorithm__list {
     padding: 10px;
-    padding-left: 20px; } }
+    padding-left: 20px; } 
+
+}
+
 .table {
-  width: 100%;
-  border: 1px solid #dddddd;
-  border-collapse: collapse; }
+    width: 100%;
+    border-collapse: collapse;
+}
 
 .table th {
-  font-weight: bold;
-  background: #efefef;
-  border: 1px solid #dddddd; }
+  font-weight: bold;}
 
 .table td {
   width: 70%;
-  border: 1px solid #dddddd;
   padding: 5px; }
 
 /*# sourceMappingURL=main.css.map */
