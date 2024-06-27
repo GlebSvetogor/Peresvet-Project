@@ -253,7 +253,8 @@ ul > li {
 
   .header__inner > .link {
     padding: 0; } }
-@media (max-width: 900px) {
+
+@media (max-width: 992px) {
   body.noscroll {
     overflow: hidden; }
 

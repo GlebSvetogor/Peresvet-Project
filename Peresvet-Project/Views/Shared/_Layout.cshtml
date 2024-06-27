@@ -29,7 +29,7 @@
                         <div class="hamb">
                             <div class="hamb__field" id="hamb">
                                 <div class="bar-menu">
-                                    <span class="bar"></span> 
+                                    <span class="bar"></span>
                                     <span class="bar"></span>
                                     <span class="bar"></span>
                                 </div>
@@ -42,19 +42,19 @@
                                 <a asp-controller="Home" asp-action="Index" class="nav__list-link">Главная</a>
                             </li>
                             <li class="nav__list-item">
-                                <a asp-controller="Home" asp-action="AboutUs" class="nav__list-link">О компании</a>
+                                <a asp-controller="Navigation" asp-action="AboutUs" class="nav__list-link">О компании</a>
                             </li>
                             <li class="nav__list-item">
-                                <a asp-controller="Home" asp-action="Price" class="nav__list-link">Прайс</a>
+                                <a asp-controller="Navigation" asp-action="Price" class="nav__list-link">Прайс</a>
                             </li>
                             <li class="nav__list-item">
-                                <a asp-controller="Home" asp-action="Contacts" class="nav__list-link">Контакты</a>
+                                <a asp-controller="Navigation" asp-action="Contacts" class="nav__list-link">Контакты</a>
                             </li>
                             <li class="nav__list-item">
-                                <a asp-controller="Home" asp-action="PaidConsultation" class="nav__list-link">Платная консультация</a>
+                                <a asp-controller="Navigation" asp-action="PaidConsultation" class="nav__list-link">Платная консультация</a>
                             </li>
                             <li class="nav__list-item">
-                                <a asp-controller="Home" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
+                                <a asp-controller="Navigation" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
                             </li>
                         </ul>
                     </div>
@@ -67,19 +67,19 @@
                         <a asp-controller="Home" asp-action="Index" class="nav__list-link">Главная</a>
                     </li>
                     <li class="nav__list-item">
-                        <a asp-controller="Home" asp-action="AboutUs" class="nav__list-link">О компании</a>
+                        <a asp-controller="Navigation" asp-action="AboutUs" class="nav__list-link">О компании</a>
                     </li>
                     <li class="nav__list-item">
-                        <a asp-controller="Home" asp-action="Price" class="nav__list-link">Прайс</a>
+                        <a asp-controller="Navigation" asp-action="Price" class="nav__list-link">Прайс</a>
                     </li>
                     <li class="nav__list-item">
-                        <a asp-controller="Home" asp-action="Contacts" class="nav__list-link">Контакты</a>
+                        <a asp-controller="Navigation" asp-action="Contacts" class="nav__list-link">Контакты</a>
                     </li>
                     <li class="nav__list-item">
-                        <a asp-controller="Home" asp-action="PaidConsultation" class="nav__list-link">Платная консультация</a>
+                        <a asp-controller="Navigation" asp-action="PaidConsultation" class="nav__list-link">Платная консультация</a>
                     </li>
                     <li class="nav__list-item">
-                        <a asp-controller="Home" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
+                        <a asp-controller="Navigation" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
                     </li>
                 </ul>
             </nav>
@@ -87,7 +87,56 @@
         </header>
 
         <main class="main">
-            @RenderBody()
+
+            <div class="row item gap-2 flex-nowrap pe-lg-3" style="margin:0 auto;">
+
+                <div class="col-0 col-lg-3 d-none d-lg-block box page">
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Проектирование</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Монтаж</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Эксплуатация систем пожарной автоматики</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Проектирование и продажа современного оборудования для защита серверных, музеев, хранилищ и др. ценного оборудования</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Аренда систем пожарной автоматики</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Аутсорсинг объектов по пожарной безопасности</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Расчеты по пожарной безопасности</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Сопровождение договоров Аренды, Субаренды по вопросам пожарной безопасности</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Сувенирная продукция МЧС</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Проведение ПТМ</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Планы эвакуации</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a asp-controller="" asp-action="">Разработка сайтов и программ по пожарной безопасности</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+                <div class="col-12 col-lg-9 box page">@RenderBody()</div>
+
+            </div>
+
         </main>
 
         <footer class="footer">

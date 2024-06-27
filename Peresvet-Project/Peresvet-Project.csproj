@@ -25,4 +25,11 @@
     <None Include="Views\Ways\Souvenirs.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Navigation\AboutUs.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
