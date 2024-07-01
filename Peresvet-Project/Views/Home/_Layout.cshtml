@@ -16,112 +16,15 @@
 
     <div class="wrapper">
 
-        <header class="header">
-            <div class="container">
-                <div class="header__inner">
-                    <a class="link" href="#">
-                        <span>Единый центр экономии затрат на пожарную безопасность</span>
-                        <abbr class="header__abbr dec-n" title="Единый центр экономии затрат на пожарную безопасность">«ЕЦЭЗ ПБ»</abbr>
-                    </a>
-                    <span class="text header__text">Основная задача компании - экономия</span>
-
-                    <nav class="navbar__wrap">
-                        <div class="hamb">
-                            <div class="hamb__field" id="hamb">
-                                <div class="bar-menu">
-                                    <span class="bar"></span>
-                                    <span class="bar"></span>
-                                    <span class="bar"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="popup" id="popup">
-                        <ul class="nav__list">
-                            <li class="nav__list-item">
-                                <a asp-controller="Home" asp-action="Index" class="nav__list-link">Главная</a>
-                            </li>
-                            <li class="nav__list-item">
-                                <a asp-controller="Navigation" asp-action="AboutUs" class="nav__list-link">О компании</a>
-                            </li>
-                            <li class="nav__list-item">
-                                <a asp-controller="Navigation" asp-action="Price" class="nav__list-link">Прайс</a>
-                            </li>
-                            <li class="nav__list-item">
-                                <a asp-controller="Navigation" asp-action="Contacts" class="nav__list-link">Контакты</a>
-                            </li>
-                            <li class="nav__list-item">
-                                <a asp-controller="Navigation" asp-action="PaidConsultation" class="nav__list-link">Платная консультация</a>
-                            </li>
-                            <li class="nav__list-item">
-                                <a asp-controller="Navigation" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div><!-- /. header__inner -->
-            </div><!-- /. container -->
-
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__list-item">
-                        <a asp-controller="Home" asp-action="Index" class="nav__list-link">Главная</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a asp-controller="Navigation" asp-action="AboutUs" class="nav__list-link">О компании</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a asp-controller="Navigation" asp-action="Price" class="nav__list-link">Прайс</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a asp-controller="Navigation" asp-action="Contacts" class="nav__list-link">Контакты</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a asp-controller="Navigation" asp-action="PaidConsultation" class="nav__list-link">Платная консультация</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a asp-controller="Navigation" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </header>
+        @await Html.PartialAsync("_Header")
 
         <main class="main">
             @RenderBody()
         </main>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__inner">
-                    <div class="footer__inner-contacts">
-                        <h3 class="footer__title">ЧУП «ПЕРЕСВЕТ-БЕЗОПАСНОСТЬ»</h3>
-                        <dl class="footer__inner-list">
-                            <dt class="footer__inner-title">Юр. адрес: </dt>
-                            <dd class="footer__inner-desc"><address>220140, г. Минск, ул. Притыцкого, д.62/1, каб.71</address></dd>
+        @await Html.PartialAsync("_Footer")
 
-                            <dt class="footer__inner-title">Email:</dt>
-                            <dd class="footer__inner-desc">
-                                <a class="link" href="mailto:peresvetby@mail.ru">peresvetby@mail.ru</a>
-                            </dd>
 
-                            <dt class="footer__inner-title">Телелефон:</dt>
-                            <dd class="footer__inner-desc">
-                                <a class="link" href="tel:80296196466">8029-619-64-66</a>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="footer__inner-payment">
-                        <h3 class="footer__title">Реквезиты для перевода на счет:</h3>
-                        <ul class="footer__inner-list">
-                            <li class="footer__list-item">р/с: BY18BLNB30120000328240000933</li>
-                            <li class="footer__list-item">ОАО «БНБ-Банк», <address>г. Минск, пр. Независимости, 87а,</address></li>
-                            <li class="footer__list-item">БИК BLNBBY2Х</li>
-                            <li class="footer__list-item">УНП 193530040</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
     <script src="https://kit.fontawesome.com/b0d4d6d65a.js" crossorigin="anonymous"></script>
