@@ -2,88 +2,79 @@
     Layout = "_Layout";
 }
 
-<section class="designing">
-    <div class="container box page">
-        <h1 class="title">Проектирование систем пожарной автоматики</h1>
-        <p class="text">
-            1. <b>Проектирование систем пожарной автоматики</b> — это лицензионный вид деятельности, первоначальный и самый важный этап создания систем. <b>Оптимизация затрат на проектирование систем пожарной автоматики – это формирование минимальной цены на услуги проектирования систем пожарной автоматики исходя из особенностей объекта.</b> Средняя стоимость проектирования систем пожарной сигнализации на рынке Беларуси сформирована на уровне от 1 бел. руб. за метр квадратный. ЕЦЭЗ ПБ оказывает услуги по снижению цены на проектирования систем пожарной сигнализации ниже рыночной до 50 %.
-        </p>
-        <figure class="algorithm">
-            <figcaption class="algorithm__caption">Работаем по следующему алгоритму:</figcaption>
-            <ol class="algorithm__list">
-                <li class="algorithm__list-item text">
-                    Совместно с Заказчиком формируем техническое задание на проектирование систем пожарной автоматики на основании предоставленной Заявки.
-                </li>
-                <li class="algorithm__list-item text">
-                    Заключаем договор на предоставление услуги <i>(оплата Заказчиком производится только по факту выполненной услуги).</i>
-                </li>
-                <li class="algorithm__list-item text">
-                    Предоставляем Заказчику сформированную цену на услуги проектирования. Если предоставленная цена не удовлетворяет Заказчика, Договор расторгается без взаимных претензий.
-                </li>
-                <li class="algorithm__list-item text">
-                    Юридически сопровождаем и консультируем Заказчика при заключении договора на услуги проектирования между Заказчиком и Подрядчиком.
-                </li>
-            </ol>
-        </figure>
-        <p class="text">
-            Сформировать заявку Вы можете
-            <span>
-                позвонив нам по тел.
-                <a href="tel:80296196466">8029-619-64-66</a>
-                либо заполнить у нас на сайте.
-            </span>
-        </p>
-        @if (ViewBag.SuccessMessage != null)
-        {
-            <div class="alert alert-success">
-                @ViewBag.SuccessMessage
-            </div>
-        }
-        <div class="request">
-            <b>
-                Чтобы оформить заявку для проектирования пожарной автоматики, нажмите на кнопку:
-            </b>
-            <button class="request__btn request__btn--open">Оформить заявку</button>
+<h1 class="title">Проектирование систем пожарной автоматики</h1>
+<p class="text">
+    1. <b>Проектирование систем пожарной автоматики</b> — это лицензионный вид деятельности, первоначальный и самый важный этап создания систем. <b>Оптимизация затрат на проектирование систем пожарной автоматики – это формирование минимальной цены на услуги проектирования систем пожарной автоматики исходя из особенностей объекта.</b> Средняя стоимость проектирования систем пожарной сигнализации на рынке Беларуси сформирована на уровне от 1 бел. руб. за метр квадратный. ЕЦЭЗ ПБ оказывает услуги по снижению цены на проектирования систем пожарной сигнализации ниже рыночной до 50 %.
+</p>
+<figure class="algorithm">
+    <figcaption class="algorithm__caption">Работаем по следующему алгоритму:</figcaption>
+    <ol class="algorithm__list">
+        <li class="algorithm__list-item text">
+            Совместно с Заказчиком формируем техническое задание на проектирование систем пожарной автоматики на основании предоставленной Заявки.
+        </li>
+        <li class="algorithm__list-item text">
+            Заключаем договор на предоставление услуги <i>(оплата Заказчиком производится только по факту выполненной услуги).</i>
+        </li>
+        <li class="algorithm__list-item text">
+            Предоставляем Заказчику сформированную цену на услуги проектирования. Если предоставленная цена не удовлетворяет Заказчика, Договор расторгается без взаимных претензий.
+        </li>
+        <li class="algorithm__list-item text">
+            Юридически сопровождаем и консультируем Заказчика при заключении договора на услуги проектирования между Заказчиком и Подрядчиком.
+        </li>
+    </ol>
+</figure>
+<p class="text">
+    Сформировать заявку Вы можете
+    <span>
+        позвонив нам по тел.
+        <a href="tel:80296196466">8029-619-64-66</a>
+        либо заполнить у нас на сайте.
+    </span>
+</p>
+    
+<div class="request">
+    <b>
+        Чтобы оформить заявку для проектирования пожарной автоматики, нажмите на кнопку:
+    </b>
+    <button class="request__btn request__btn--open">Оформить заявку</button>
 
 
 
-            <div class="request__window">
-                <div class="request__inner">
-                    <h2 class="title">Форма заявки</h2>
+    <div class="request__window">
+        <div class="request__inner">
+            <h2 class="title">Форма заявки</h2>
 
-                    <form class="request__form" method="post">
-                        <label class="request__label">Адрес объекта:</label>
-                        <input class="request__input" name="content">
+            <form class="request__form" method="post">
+                <label class="request__label">Адрес объекта:</label>
+                <input class="request__input" name="content">
 
-                        <label class="request__label">Требуемые системы на объекте</label>
-                        <input class="request__input" name="content">
+                <label class="request__label">Требуемые системы на объекте</label>
+                <input class="request__input" name="content">
 
-                        <label class="request__label" for="">Наличие актуальной планировки объекта в формате PDF, Автокаде:</label>
-                        <input class="request__input" type="text" name="content">
+                <label class="request__label" for="">Наличие актуальной планировки объекта в формате PDF, Автокаде:</label>
+                <input class="request__input" type="text" name="content">
 
-                        <label class="request__label" for="">Наличие разработанной ТХ</label>
-                        <input class="request__input" type="text" name="content">
+                <label class="request__label" for="">Наличие разработанной ТХ</label>
+                <input class="request__input" type="text" name="content">
 
-                        <label class="requ  est__label" for="">Функциональное назначение объекта, общая характеристика объекта, что представляет собой здание (помещения)</label>
-                        <input class="request__input" type="text" name="content">
+                <label class="requ  est__label" for="">Функциональное назначение объекта, общая характеристика объекта, что представляет собой здание (помещения)</label>
+                <input class="request__input" type="text" name="content">
 
-                        <label class="request__label" for="">Общая площадь здания (помещений)</label>
-                        <input class="request__input" type="number" name="content">
+                <label class="request__label" for="">Общая площадь здания (помещений)</label>
+                <input class="request__input" type="number" name="content">
 
-                        <label class="request__label" for="">Кол-во этажей</label>
-                        <input class="request__input" type="number" name="content">
-                        <input type='submit' value='Send' />
-                    </form>
-                    <button class="request__btn request__btn--send">Отправить заявку</button>
-                    <button class="request__btn-close">&#10006;</button>
-                </div><!-- /.request__inner -->
-            </div><!-- /.request__window -->
+                <label class="request__label" for="">Кол-во этажей</label>
+                <input class="request__input" type="number" name="content">
+                <input type='submit' value='Send' />
+            </form>
+            <button class="request__btn request__btn--send">Отправить заявку</button>
+            <button class="request__btn-close">&#10006;</button>
+        </div><!-- /.request__inner -->
+    </div><!-- /.request__window -->
 
-        </div><!-- /. request -->
+</div><!-- /. request -->
 
 
-        <p class="text m-0">
-            <b>Стоимость услуги составляет 200 бел. руб. при общей площади объекта до 1000 м.кв, при площади более 1000 м.кв. – 50% от экономии средств Заказчика.</b>
-        </p>
-    </div><!-- /.container -->
-</section>
+<p class="text m-0">
+    <b>Стоимость услуги составляет 200 бел. руб. при общей площади объекта до 1000 м.кв, при площади более 1000 м.кв. – 50% от экономии средств Заказчика.</b>
+</p>

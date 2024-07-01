@@ -67,6 +67,10 @@ tbody > tr:last-child > td{
     padding: 8px 16px !important;
 }
 
+.nested__link{
+    padding-left:32px !important;
+}
+
 .header__inner {
     gap: 10px;
 }
