@@ -36,11 +36,57 @@
     <b>
         Чтобы оформить заявку для проектирования пожарной автоматики, нажмите на кнопку:
     </b>
-    <button class="request__btn request__btn--open">Оформить заявку</button>
-
-
+    <button class="btn btn-primary request__btn request__btn--open">Оформить заявку</button>
 
     <div class="request__window">
+        <div class="request__inner">
+
+            <h2 class="title">Форма заявки</h2>
+
+            <form asp-controller="Home" asp-action="MakeRequest">
+                <div class="form-group mb-3">
+                    <label for="inputAddress2">Адрес объекта:</label>
+                    <input type="text" class="form-control" id="inputAddress2">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleInputContent">Требуемые системы на объекте:</label>
+                    <input type="text" class="form-control" id="exampleInputContent">
+                </div>
+                <div class="custom-file mb-3">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Наличие актуальной планировки объекта в формате PDF, Автокаде:</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleInputTechnic">Наличие разработанной ТХ:</label>
+                    <input type="text" class="form-control" id="exampleInputTechnic">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleFormControlTextarea1">Функциональное назначение объекта, общая характеристика объекта, что представляет собой здание (помещение):</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleInputSquare">Общая площадь здания (помещений):</label>
+                    <input type="number" class="form-control" id="exampleInputSquare">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleInputFloors">Кол-во этажей:</label>
+                    <input type="number" class="form-control" id="exampleInputFloors">
+                </div>
+                
+
+                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            </form>
+
+            <button class="request__btn request__btn-close" aria-label="Close">
+                <span class="request__btn-close-icon">&times;</span>
+            </button>
+        </div>
+
+    </div><!-- /.request__window -->
+
+    @* <div class="request__window">
         <div class="request__inner">
             <h2 class="title">Форма заявки</h2>
 
@@ -70,7 +116,7 @@
             <button class="request__btn request__btn--send">Отправить заявку</button>
             <button class="request__btn-close">&#10006;</button>
         </div><!-- /.request__inner -->
-    </div><!-- /.request__window -->
+    </div> *@
 
 </div><!-- /. request -->
 

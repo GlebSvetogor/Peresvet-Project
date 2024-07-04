@@ -40,49 +40,40 @@
                         <a asp-controller="Navigation" asp-action="MakeRequest" class="nav__list-link">Оформить заявку</a>
                     </li>
                     <li class="nav__list-item">
-                        <ul class="row">
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <p class="link list-group__link m-0 pb-0 fw-normal">Оптимизация затрат на системы пожарной автоматики:</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <a class="link list-group__link nested__link" asp-controller="" asp-action="">Проектирование</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a class="link list-group__link nested__link" asp-controller="" asp-action="">Монтаж</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a class="link list-group__link nested__link" style="border-bottom: 1px solid #e4e4e4;" asp-controller="" asp-action="">Эксплуатация систем пожарной автоматики</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="Equipment" asp-action="Index">Проектирование и продажа современного оборудования для защита серверных, музеев, хранилищ и др. ценного оборудования</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="Rent" asp-action="Index">Аренда систем пожарной автоматики</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="Outsourcing" asp-action="Index">Аутсорсинг объектов по пожарной безопасности</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="Calculations" asp-action="Index">Расчеты по пожарной безопасности</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="Help" asp-action="Index">Сопровождение договоров Аренды, Субаренды по вопросам пожарной безопасности</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="Souvenirs" asp-action="Index">Сувенирная продукция МЧС</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="ptm" asp-action="Index">Проведение ПТМ</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="Evacuation" asp-action="Index">Планы эвакуации</a>
-                            </li>
-                            <li class="list-group-item col-12 col-sm-6 col-md-3">
-                                <a class="link list-group__link" asp-controller="WebDevelopment" asp-action="Index">Разработка сайтов и программ по пожарной безопасности</a>
-                            </li>
-                        </ul>
+                        <a asp-controller="Optimization" asp-action="Design" class="nav__list-link">Оптимизация затрат на проектирование СПА</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Optimization" asp-action="Installation" class="nav__list-link">Оптимизация затрат на монтаж СПА</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Optimization" asp-action="Systems" class="nav__list-link">Оптимизация затрат на эксплуатацию СПА</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Equipment" asp-action="Index" class="nav__list-link">Проектирование и продажа современного оборудования для защита серверных, музеев, хранилищ и др. ценного оборудования</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Rent" asp-action="Index" class="nav__list-link">Аренда систем пожарной автоматики</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Outsourcing" asp-action="Index" class="nav__list-link">Аутсорсинг объектов по пожарной безопасности</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Calculations" asp-action="Index" class="nav__list-link">Расчеты по пожарной безопасности</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Help" asp-action="Index" class="nav__list-link">Сопровождение договоров Аренды, Субаренды по вопросам пожарной безопасности</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Souvenirs" asp-action="Index" class="nav__list-link">Сувенирная продукция МЧС</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="ptm" asp-action="Index" class="nav__list-link">Проведение ПТМ</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="Evacuation" asp-action="Index" class="nav__list-link">Планы эвакуации</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a asp-controller="WebDevelopment" asp-action="Index" class="nav__list-link">Разработка сайтов и программ по пожарной безопасности</a>
                     </li>
                 </ul>
             </div>

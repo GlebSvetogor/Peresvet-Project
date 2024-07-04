@@ -1,13 +1,20 @@
-const requestWindowOpenBtn = document.querySelector(".request__btn--open")
-const requestWindowSendBtn = document.querySelector(".request__btn--send")
-const requestWindowCloseBtn = document.querySelector(".request__btn-close")
-const requestWindow = document.querySelector(".request__window")
-// const windowCloseBtn = document.querySelector(".request__btn--open")
+const requestWindowOpenBtn = document.querySelector(".request__btn--open");
+const requestWindowSendBtn = document.querySelector(".request__btn--send");
+const requestWindowCloseBtn = document.querySelector(".request__btn-close");
+const requestWindow = document.querySelector(".request__window");
 
-requestWindowOpenBtn.addEventListener('click', requestWindowToggle);
-requestWindowSendBtn.addEventListener('click', requestWindowToggle);
-requestWindowCloseBtn.addEventListener('click', requestWindowToggle);
+function requestWindowToggle() {
+    requestWindow.classList.toggle("request__window--active");
+}
 
-function requestWindowToggle(){
-    requestWindow.classList.toggle("request__window--active")
+if (requestWindowOpenBtn) {
+    requestWindowOpenBtn.addEventListener('click', requestWindowToggle);
+}
+
+if (requestWindowSendBtn) {
+    requestWindowSendBtn.addEventListener('click', requestWindowToggle);
+}
+
+if (requestWindowCloseBtn) {
+    requestWindowCloseBtn.addEventListener('click', requestWindowToggle);
 }

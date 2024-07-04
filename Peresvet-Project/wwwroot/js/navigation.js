@@ -12,7 +12,6 @@
     liElements.forEach((li) => {
         const link = li.querySelector('a.nav__list-link');
         if (link && link.getAttribute('href') == currentPath) {
-            console.log(li);
             li.classList.add(activeLiClassName);
         }
     })

@@ -27,6 +27,20 @@ body {
   line-height: 1.5;
   box-sizing: inherit; }
 
+.request__btn-close {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.request__btn-close-icon {
+    font-size: 50px;
+    padding: 5px;
+}
+
 .table {
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -467,19 +481,20 @@ ul > li {
   font-size: 32px; }
 
 .request__window {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  background-color: transparent; }
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
 
 .request__window--active {
+    padding:40px;
   display: flex; }
 
 .request__window::before {
@@ -528,7 +543,15 @@ ul > li {
   .algorithm__list {
     padding: 10px;
     padding-left: 20px; } 
+}
 
+.request__window{
+    padding:20px;
+}
+
+.request__inner{
+    padding:20px;
+    height:auto;
 }
 
 .table {
