@@ -5,6 +5,7 @@ const requestWindow = document.querySelector(".request__window");
 
 function requestWindowToggle() {
     requestWindow.classList.toggle("request__window--active");
+    body.classList.toggle("noscroll")
 }
 
 if (requestWindowOpenBtn) {

@@ -1,6 +1,4 @@
-﻿@{
-    Layout = "_Layout";
-}
+﻿@model Peresvet_Project.Models.RequestModel
 
 <h1 class="title">Проектирование систем пожарной автоматики</h1>
 <p class="text">
@@ -43,38 +41,44 @@
 
             <h2 class="title">Форма заявки</h2>
 
-            <form asp-controller="Home" asp-action="MakeRequest">
+            <form asp-controller="Home" asp-action="MakeRequest" enctype="multipart/form-data">
                 <div class="form-group mb-3">
-                    <label for="inputAddress2">Адрес объекта:</label>
-                    <input type="text" class="form-control" id="inputAddress2">
+                    <label asp-for="Address">Адрес объекта:</label>
+                    <input type="text" class="form-control" asp-for="Address">
+                    <span asp-validation-for="Address" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="exampleInputContent">Требуемые системы на объекте:</label>
-                    <input type="text" class="form-control" id="exampleInputContent">
+                    <label asp-for="RequiredSystems">Требуемые системы на объекте:</label>
+                    <input type="text" class="form-control" asp-for="RequiredSystems">
+                    <span asp-validation-for="RequiredSystems" class="text-danger"></span>
                 </div>
                 <div class="custom-file mb-3">
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Наличие актуальной планировки объекта в формате PDF, Автокаде:</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label asp-for="LayoutFile" class="form-label">Наличие актуальной планировки объекта в формате PDF, Автокаде:</label>
+                        <input class="form-control" type="file" asp-for="LayoutFile">
+                        <span asp-validation-for="LayoutFile" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="exampleInputTechnic">Наличие разработанной ТХ:</label>
-                    <input type="text" class="form-control" id="exampleInputTechnic">
+                    <label asp-for="TechnicalSpecification">Наличие разработанной ТХ:</label>
+                    <input type="text" class="form-control" asp-for="TechnicalSpecification">
+                    <span asp-validation-for="TechnicalSpecification" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="exampleFormControlTextarea1">Функциональное назначение объекта, общая характеристика объекта, что представляет собой здание (помещение):</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label asp-for="FunctionalPurpose">Функциональное назначение объекта, общая характеристика объекта, что представляет собой здание (помещение):</label>
+                    <textarea class="form-control" asp-for="FunctionalPurpose" rows="3"></textarea>
+                    <span asp-validation-for="FunctionalPurpose" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="exampleInputSquare">Общая площадь здания (помещений):</label>
-                    <input type="number" class="form-control" id="exampleInputSquare">
+                    <label asp-for="BuildingArea">Общая площадь здания (помещений):</label>
+                    <input type="number" class="form-control" asp-for="BuildingArea">
+                    <span asp-validation-for="BuildingArea" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="exampleInputFloors">Кол-во этажей:</label>
-                    <input type="number" class="form-control" id="exampleInputFloors">
+                    <label asp-for="NumberOfFloors">Кол-во этажей:</label>
+                    <input type="number" class="form-control" asp-for="NumberOfFloors">
+                    <span asp-validation-for="NumberOfFloors" class="text-danger"></span>
                 </div>
-                
 
                 <button type="submit" class="btn btn-primary">Отправить заявку</button>
             </form>
@@ -86,37 +90,7 @@
 
     </div><!-- /.request__window -->
 
-    @* <div class="request__window">
-        <div class="request__inner">
-            <h2 class="title">Форма заявки</h2>
-
-            <form class="request__form" method="post">
-                <label class="request__label">Адрес объекта:</label>
-                <input class="request__input" name="content">
-
-                <label class="request__label">Требуемые системы на объекте</label>
-                <input class="request__input" name="content">
-
-                <label class="request__label" for="">Наличие актуальной планировки объекта в формате PDF, Автокаде:</label>
-                <input class="request__input" type="text" name="content">
-
-                <label class="request__label" for="">Наличие разработанной ТХ</label>
-                <input class="request__input" type="text" name="content">
-
-                <label class="requ  est__label" for="">Функциональное назначение объекта, общая характеристика объекта, что представляет собой здание (помещения)</label>
-                <input class="request__input" type="text" name="content">
-
-                <label class="request__label" for="">Общая площадь здания (помещений)</label>
-                <input class="request__input" type="number" name="content">
-
-                <label class="request__label" for="">Кол-во этажей</label>
-                <input class="request__input" type="number" name="content">
-                <input type='submit' value='Send' />
-            </form>
-            <button class="request__btn request__btn--send">Отправить заявку</button>
-            <button class="request__btn-close">&#10006;</button>
-        </div><!-- /.request__inner -->
-    </div> *@
+    
 
 </div><!-- /. request -->
 

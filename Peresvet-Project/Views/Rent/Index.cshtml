@@ -1,5 +1,4 @@
-﻿
-
+﻿@model Peresvet_Project.Models.RequestModel
 
 <h1 class="title">Аренда систем пожарной автоматики.</h1>
 <p class="text">
@@ -30,12 +29,65 @@
     Сформировать заявку Вы можете <span>
         позвонив нам по тел.
         <a href="tel:80296196466">8029-619-64-66</a>
-        либо направить на эл. почту :
-        <a href="mailto:peresvetby@mail.ru">peresvetby@mail.ru</a>
+        либо заполнив у нас на сайте :
+        <button class="btn btn-primary request__btn request__btn--open">Оформить заявку</button>
     </span>
-    заполненную заявку. <a href="#"><i>(Оформить заявку)</i>.</a>
 </p>
-<figure class="algorithm">
+
+<div class="request__window">
+    <div class="request__inner">
+
+        <h2 class="title">Форма заявки</h2>
+
+        <form asp-controller="Home" asp-action="MakeRequest" enctype="multipart/form-data">
+            <div class="form-group mb-3">
+                <label asp-for="Address">Адрес объекта:</label>
+                <input type="text" class="form-control" asp-for="Address">
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="FunctionalPurpose">Функциональное назначение объекта, общая характеристика объекта, что представляет собой здание (помещение):</label>
+                <textarea class="form-control" asp-for="FunctionalPurpose" rows="3"></textarea>
+                <span asp-validation-for="FunctionalPurpose" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="RequiredSystems">Требуемые системы автоматики на объекте:</label>
+                <input type="text" class="form-control" asp-for="RequiredSystems">
+                <span asp-validation-for="RequiredSystems" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="ProjectAvailability">Наличие проектов на системы:</label>
+                <input type="text" class="form-control" asp-for="ProjectAvailability">
+                <span asp-validation-for="ProjectAvailability" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="ProjectTimeline">Сроки реализации проекта:</label>
+                <input type="text" class="form-control" asp-for="ProjectTimeline">
+                <span asp-validation-for="ProjectTimeline" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="CustomerContacts">Конт. данные заказчика (почта и телефон):</label>
+                <input type="text" class="form-control" asp-for="CustomerContacts">
+                <span asp-validation-for="CustomerContacts" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+        </form>
+
+        <button class="request__btn request__btn-close" aria-label="Close">
+            <span class="request__btn-close-icon">&times;</span>
+        </button>
+    </div>
+
+</div><!-- /.request__window -->
+
+
+@* <figure class="algorithm">
     <figcaption class="algorithm__caption">
         <b>Заявка на Аренду систем пожарной автоматики</b>
     </figcaption>
@@ -62,7 +114,7 @@
             Конт. тел. Заказчика
         </li>
     </ol>
-</figure>
+</figure> *@
 <p class="text m-0">
     <b>Стоимость услуг : стоимость аренды систем автоматики напрямую зависит от стоимости систем и периода аренды, рассчитывается в каждом случае индивидуально. Возможно предоставления дополнительных бонусов. </b>
 </p>

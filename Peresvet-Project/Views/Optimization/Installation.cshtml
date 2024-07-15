@@ -1,6 +1,4 @@
-﻿@{
-    Layout = "_Layout";
-}
+﻿@model Peresvet_Project.Models.RequestModel
 
 <h1 class="title">Монтаж систем пожарной автоматики </h1>
 <p class="text">
@@ -39,52 +37,89 @@
 
                 <h2 class="title">Форма заявки</h2>
 
-                <form asp-controller="Home" asp-action="MakeRequest">
+                <form asp-controller="Home" asp-action="MakeRequest" enctype="multipart/form-data">
                     <div class="form-group mb-3">
-                        <label for="inputAddress2">Адрес объекта:</label>
-                        <input type="text" class="form-control" id="inputAddress2">
+                        <label asp-for="Address">Адрес объекта:</label>
+                        <input type="text" class="form-control" asp-for="Address">
+                        <span asp-validation-for="Address" class="text-danger"></span>
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="exampleInputContent">Требуемые системы автоматики на объекте:</label>
-                        <input type="text" class="form-control" id="exampleInputContent">
+                        <label asp-for="RequiredSystems">Требуемые системы автоматики на объекте:</label>
+                        <input type="text" class="form-control" asp-for="RequiredSystems">
+                        <span asp-validation-for="RequiredSystems" class="text-danger"></span>
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="exampleFormControlTextarea1">Функциональное назначение здания:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label asp-for="FunctionalPurpose">Функциональное назначение здания:</label>
+                        <textarea class="form-control" asp-for="FunctionalPurpose" rows="3"></textarea>
+                        <span asp-validation-for="FunctionalPurpose" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleFormCharacter">Год постройки здания, характеристика стен и перекрытий:</label>
-                        <textarea class="form-control" id="exampleFormCharacter" rows="3"></textarea>
+                        <label asp-for="BuildingCharacteristics">Год постройки здания, характеристика стен и перекрытий:</label>
+                        <textarea class="form-control" asp-for="BuildingCharacteristics" rows="3"></textarea>
+                        <span asp-validation-for="BuildingCharacteristics" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleFormState">Состояние объекта (новый, действующий, ремонт…):</label>
-                        <textarea class="form-control" id="exampleFormState" rows="3"></textarea>
+                        <label asp-for="BuildingCondition">Состояние объекта (новый, действующий, ремонт…):</label>
+                        <textarea class="form-control" asp-for="BuildingCondition" rows="3"></textarea>
+                        <span asp-validation-for="BuildingCondition" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleInputHeight">Высота потолков:</label>
-                        <input type="number" class="form-control" id="exampleInputHeight">
+                        <label asp-for="CeilingHeight">Высота потолков:</label>
+                        <input type="number" class="form-control" asp-for="CeilingHeight">
+                        <span asp-validation-for="CeilingHeight" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleInputFloors">Кол-во этажей:</label>
-                        <input type="number" class="form-control" id="exampleInputFloors">
+                        <label asp-for="BuildingArea">Общая площадь здания (помещений):</label>
+                        <input type="number" class="form-control" asp-for="BuildingArea">
+                        <span asp-validation-for="BuildingArea" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleInputTime">Время проведения работ (в течение раб. дня, ночью, выходные…):</label>
-                        <input type="text" class="form-control" id="exampleInputTime">
+                        <label asp-for="NumberOfFloors">Кол-во этажей:</label>
+                        <input type="number" class="form-control" asp-for="NumberOfFloors">
+                        <span asp-validation-for="NumberOfFloors" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleInputDeveloper">Когда и кем разработан проект:</label>
-                        <input type="text" class="form-control" id="exampleInputDeveloper">
+                        <label asp-for="WorkSchedule">Время проведения работ (в течение раб. дня, ночью, выходные…):</label>
+                        <input type="text" class="form-control" asp-for="WorkSchedule">
+                        <span asp-validation-for="WorkSchedule" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleInputDemontage">Наличие старой системы, необ. демонтажа:</label>
-                        <input type="text" class="form-control" id="exampleInputDemontage">
+                        <label asp-for="ProjectDeveloper">Когда и кем разработан проект:</label>
+                        <input type="text" class="form-control" asp-for="ProjectDeveloper">
+                        <span asp-validation-for="ProjectDeveloper" class="text-danger"></span>
                     </div>
+
                     <div class="form-group mb-3">
-                        <label for="exampleInputContacts">Конт. данные заказчика:</label>
-                        <input type="text" class="form-control" id="exampleInputContacts">
+                        <label asp-for="OldSystemInfo">Наличие старой системы, необ. демонтажа:</label>
+                        <input type="text" class="form-control" asp-for="OldSystemInfo">
+                        <span asp-validation-for="OldSystemInfo" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="CustomerContacts">Конт. данные заказчика:</label>
+                        <input type="text" class="form-control" asp-for="CustomerContacts">
+                        <span asp-validation-for="CustomerContacts" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="LayoutFile">Наличие актуальной планировки объекта в формате PDF, Автокаде:</label>
+                        <input class="form-control" type="file" asp-for="LayoutFile">
+                        <span asp-validation-for="LayoutFile" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="TechnicalSpecification">Наличие разработанной ТХ:</label>
+                        <input type="text" class="form-control" asp-for="TechnicalSpecification">
+                        <span asp-validation-for="TechnicalSpecification" class="text-danger"></span>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Отправить заявку</button>
@@ -100,46 +135,7 @@
     </span>
 
 </p>
-<figure class="algorithm">
-    <figcaption class="algorithm__caption">
-        <b>Образец Заявки для формирование технического задания на проектирование систем пожарной автоматики.</b>
-    </figcaption>
-    <ol class="algorithm__list">
-        <li class="algorithm__list-item">
-            Адрес объекта
-        </li>
-        <li class="algorithm__list-item">
-            Требуемые системы автоматики на объекте
-        </li>
-        <li class="algorithm__list-item">
-            Функциональное назначение здания
-        </li>
-        <li class="algorithm__list-item">
-            Год постройки здания, характеристика стен и перекрытий
-        </li>
-        <li class="algorithm__list-item">
-            Состояние объекта (новый, действующий, ремонт…)
-        </li>
-        <li class="algorithm__list-item">
-            Высота потолков
-        </li>
-        <li class="algorithm__list-item">
-            Этажность
-        </li>
-        <li class="algorithm__list-item">
-            Время проведения работ (в течение раб. дня, ночью, выходные…)
-        </li>
-        <li class="algorithm__list-item">
-            Когда и кем разработан проект
-        </li>
-        <li class="algorithm__list-item">
-            Наличие старой системы, необ. демонтажа
-        </li>
-        <li class="algorithm__list-item">
-            Конт. данные заказчика
-        </li>
-    </ol>
-</figure>
+
 <p class="text m-0">
     <b>Стоимость услуги составляет 300 бел. руб. при общей площади объекта до 1000 м.кв, при площади более 1000 м.кв. – 50% от экономии средств Заказчика.</b>
 </p>
